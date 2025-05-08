@@ -1,43 +1,33 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
+import "package:rivera_act7/homeScreen.dart";
+import "package:rivera_act7/animated_padding.dart";
+import "package:rivera_act7/bottom_navigation_bar.dart";
+import "package:rivera_act7/close_button.dart";
+import "package:rivera_act7/cupertino_picker.dart";
+import "package:rivera_act7/date_picker.dart";
+import "package:rivera_act7/expand_icon.dart";
 
-void main() => runApp(MyApp());
+void main() => runApp(MirutasApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MirutasApp extends StatelessWidget {
+  const MirutasApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+      //showSemanticsDebugger: true,
+      debugShowCheckedModeBanner: false,
+      title: "Entre paginas routes",
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const HomeScreen(),
+        "/Animated_Padding": (context) => const Animated_Padding(),
+        "/Bottom_Navigation_Bar": (context) => const Bottom_Navigation_Bar(),
+        "/Close_Button": (context) => const Close_Button(),
+        "/Cupertino_Picker": (context) => const Cupertino_Picker(),
+        "/Date_Picker": (context) => const Date_Picker(),
+        "/Expand_Icon": (context) => const Expand_Icon(),
+      },
     );
   }
 }
