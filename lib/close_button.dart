@@ -1,4 +1,3 @@
-//! CloseButton
 import 'package:flutter/material.dart';
 
 class Close_Button extends StatelessWidget {

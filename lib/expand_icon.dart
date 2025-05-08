@@ -1,5 +1,3 @@
-//! ExpandIcon
-
 import 'package:flutter/material.dart';
 
 class Expand_Icon extends StatefulWidget {

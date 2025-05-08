@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 //!AnimatedPadding
 
 class Animated_Padding extends StatefulWidget {
